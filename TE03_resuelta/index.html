@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <script src="js/ejercicios.js"></script>
+  <script src="js/ejercicio1.js"></script>
+  <script src="js/ejercicio2.js"></script>
+  <script src="js/ejercicio3.js"></script>
+  <script src="js/ejercicio4.js"></script>
+  <script src="js/ejercicio5.js"></script>
+  <script src="js/ejercicio6.js"></script>
+  <script src="js/ejercicio7.js"></script>
+  <script src="js/ejercicio8.js"></script>
+  <script src="js/ejercicio9.js"></script>
+
+  <h2>Función 1: <strong>Palíndromo</strong></h2>
+  <script>
+    let cadena;
+    cadena = "Pablito clavó un clavito";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${palindromo(cadena) ? "SÍ" : "NO"} es un palíndromo.</p>`);
+
+    cadena = "¿Son robos? No, sólo son sobornos.";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${palindromo(cadena) ? "SÍ" : "NO"} es un palíndromo.</p>`);
+
+    cadena = "Adivina ya te opina, ya ni miles origina, ya ni cetro me domina, ya ni monarcas, a repaso ni mulato carreta, acaso nicotina, ya ni cita vecino, anima cocina, pedazo gallina, cedazo terso nos retoza de canilla goza, de pánico camina, ónice vaticina, ya ni tocino saca, a terracota luminosa pera, sacra nómina y ánimo de mortecina, ya ni giros elimina, ya ni poeta, ya ni vida";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${palindromo(cadena) ? "SÍ" : "NO"} es un palíndromo.</p>`);
+  </script>
+
+  <h2>Función 2: <strong>Combinaciones de letras</strong></h2>
+  <script>
+    cadena = "pan";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${combinLetras(cadena)}.</p>`);
+
+    cadena = "Pablito";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${combinLetras(cadena)}.</p>`);
+
+    cadena = "palíndromo";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${combinLetras(cadena)}.</p>`);
+
+  </script>
+
+  <h2>Función 3: <strong>Reodenar letras al revés</strong></h2>
+  <script>
+    cadena = "Webmaster";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${letrasOrdenReves(cadena)}.</p>`);
+
+    cadena = "Front-end";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${letrasOrdenReves(cadena)}.</p>`);
+
+    cadena = "Back-end";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${letrasOrdenReves(cadena)}.</p>`);
+  </script>
+
+  <h2>Función 4: <strong>La palabra más larga</strong></h2>
+  <script>
+    cadena = "Un soneto me manda hacer Violante";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${laPalabraMasLarga(cadena)}.</p>`);
+
+    cadena = "en mi vida me he visto en tal aprieto";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${laPalabraMasLarga(cadena)}.</p>`);
+
+    cadena = "Catorce versos dicen que es soneto,";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${laPalabraMasLarga(cadena)}.</p>`);
+
+    cadena = "burla burlando van los tres delante.";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${laPalabraMasLarga(cadena)}.</p>`);
+
+  </script>
+
+  <h2>Función 5: <strong>Contar vocales</strong></h2>
+  <script>
+    cadena = "Yo pensé que no hallara consonante,";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${contarVocales(cadena)}.</p>`);
+
+    cadena = "y estoy a la mitad de otro cuarteto,";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${contarVocales(cadena)}.</p>`);
+
+    cadena = "mas si me veo en el primer terceto,";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${contarVocales(cadena)}.</p>`);
+
+    cadena = "no hay cosa en los cuartetos que me espante.";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${contarVocales(cadena)}.</p>`);
+  </script>
+
+  <h2>Función 6: <strong>Tipos de variables</strong></h2>
+  <script>
+    let variable1;
+    document.write(`<p>Parámetro que se pasa: "${variable1}"<br>`);
+    document.write(`Resultado: ${tipoVar(variable1)}.</p>`);
+
+    variable1 = "Pablo";
+    document.write(`<p>Parámetro que se pasa: "${variable1}"<br>`);
+    document.write(`Resultado: ${tipoVar(variable1)}.</p>`);
+
+    variable1 = 16671;
+    document.write(`<p>Parámetro que se pasa: "${variable1}"<br>`);
+    document.write(`Resultado: ${tipoVar(variable1)}.</p>`);
+
+    variable1 = true;
+    document.write(`<p>Parámetro que se pasa: "${variable1}"<br>`);
+    document.write(`Resultado: ${tipoVar(variable1)}.</p>`);
+
+    variable1 = () => 'Hola';
+    document.write(`<p>Parámetro que se pasa: "${variable1}"<br>`);
+    document.write(`Resultado: ${tipoVar(variable1)}.</p>`);
+
+    variable1 = {nombre: 'Pablo', edad: 51};
+    document.write(`<p>Parámetro que se pasa: "${variable1}"<br>`);
+    document.write(`Resultado: ${tipoVar(variable1)}.</p>`);
+  </script>
+
+  <h2>Función 7: <strong>Dividir en monedas y billetes</strong></h2>
+  <script>
+    let importe;
+    let billMon = [];
+    let division = [];
+
+    importe = 46;
+    billMon = [50,25,10,5,2,1];
+    document.write(`<p>Parámetros que se pasan: "${importe} pesetas" en monedas de "${billMon}"<br>`);
+    document.write(`Resultado: ${dividirEnBilletesMonedas(importe, billMon, division)}.</p>`);
+
+    importe = 155;
+    billMon = [100,50,20,10,5,2,1,0.5,0.20,0.10,0.05,0.02,0.01];
+    division.length = 0;
+    document.write(`<p>Parámetros que se pasan: "${importe}€" en monedas y billetes de "${billMon}"<br>`);
+    document.write(`Resultado: ${dividirEnBilletesMonedas(importe, billMon, division)}.</p>`);
+
+    importe = 1386.77;
+    billMon = [500,200,100,50,20,10,5,2,1,0.5,0.20,0.10,0.05,0.02,0.01];
+    division.length = 0;
+    document.write(`<p>Parámetros que se pasan: "${importe}" y "${billMon}"<br>`);
+    document.write(`Resultado: ${dividirEnBilletesMonedas(importe, billMon, division)}.</p>`);
+
+  </script>
+
+  <h2>Función 8: <strong>Caracteres diferentes</strong></h2>
+  <script>
+    cadena = "Por el primer terceto voy entrando,";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${charsDiferentes(cadena)}.</p>`);
+
+    cadena = "y parece que entré con pie derecho,";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${charsDiferentes(cadena)}.</p>`);
+
+    cadena = "pues fin con este verso le voy dando.";
+    document.write(`<p>Parámetro que se pasa: "${cadena}"<br>`);
+    document.write(`Resultado: ${charsDiferentes(cadena)}.</p>`);
+  </script>
+
+  <h2>Función 9: <strong>Cadena aleatorio de longitud aleatoria</strong></h2>
+  <script>
+    document.write(`<p>Parámetros que se pasan: min:0, max=5<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(0,5)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(0,5)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(0,5)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(0,5)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(0,5)}.</p>`);
+
+    document.write(`<p>Parámetros que se pasan: min:6, max=12<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(6,12)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(6,12)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(6,12)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(6,12)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(6,12)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(6,12)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(6,12)}.</p>`);
+
+    document.write(`<p>Parámetros que se pasan: min:15, max=50<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(15,50)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(15,50)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(15,50)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(15,50)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(15,50)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(15,50)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(15,50)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(15,50)}.<br>`);
+    document.write(`Resultado: ${cadenaAleatoria(15,50)}.</p>`);
+  </script>
+</body>
+</html>
