@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo: Objeto navigator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<script>
+			document.write("Navegador: " + navigator.appName + "<br>");
+			document.write("Versi\xf3n: " + navigator.appVersion + "<br>");
+			if (navigator.javaEnabled()){
+				document.write("El navegador S\xcd est\xe1 preparado para soportar los Applets de Java")
+			}
+			else{
+				document.write("El navegador NO est\xe1 preparado para soportar los Applets de Java")
+			}
+		</script>
+	</body>
+</html>

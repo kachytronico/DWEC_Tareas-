@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <script>
+            let nCampos = prompt("Cuantos campos tendra tu formulario");
+            while (isNaN(parseInt(nCampos))) {
+                alert("El numero de campos debe ser un numero entero");
+                nCampos = prompt("Cuantos campos tendra tu formulario");
+            };
+
+            for (i = 1; i <= nCampos; i++) {
+                let tipo = prompt("Elige el tipo de campo" + i + "(text, password o button)");
+                while (tipo != "text" && tipo != "password" && tipo != "button") {
+                    alert("El tipo solo puede tener los valores: text, password o button");
+                    tipo = prompt("Elige el tipo de campo" + i + "(text, password o button)");
+                }
+                let nombre = prompt("Elige el nombre del campo" + i);
+                let valor = prompt("Elige el valor por defecto del campo" + i);
+                document.write('<label>' + nombre + '<label><br><input type="' + tipo + '" name="' + nombre + '" value="' + valor + '"><br><br>');
+            }
+        </script>
+    </form>
+</body>
+
+</html>

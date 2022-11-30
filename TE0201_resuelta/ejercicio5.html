@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <table>
+        <script>
+            let filas = prompt("Escribe el numero de filas");
+            let columnas = prompt("Escribe el numero de columnas");
+            let numero = 1;
+
+            for (f = 0; f < filas; f++) {
+                document.write("<tr>");
+                for(c=0;c<columnas;c++){
+                    if(esprimo(numero)){
+                        document.write("<td> p </td>");
+                    }else{
+                        document.write("<td>" + numero +" </td>");
+                    }                    
+                    numero++;
+                }
+                document.write("</tr>");
+            }
+
+            function esprimo(numero){
+                let i = 2;
+                if(numero === 1){
+                    return true;
+                }
+                while(i < numero){
+                    if(numero%i === 0){
+                        return false;
+                    }
+                    i++;
+                }
+                return true;
+            }
+        </script>
+
+
+    </table>
+</body>
+
+</html>

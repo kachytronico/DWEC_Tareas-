@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio3</title>
+    <script>
+        let multiplos = [];
+        let i = 1;
+        let suma = 0;
+        let multiplo = i * 23;
+        while (multiplo < 1000) {
+            multiplos.push(multiplo);
+            suma += multiplo;
+            i++;
+            multiplo = i * 23;
+        }
+        alert("Los multiplos de 23 inferiores a 1000 son: " + multiplos.join(", "));
+        alert("La suma de los multiplos es:" + suma);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

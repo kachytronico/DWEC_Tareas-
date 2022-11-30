@@ -1,0 +1,226 @@
+
+<!-- saved from url=(0101)https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html -->
+<html lang="es" dir="ltr" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	
+	<title>Demo: gramática en JavaScript</title>
+
+    <link href="./Demo_ gramática en JavaScript_files/estilos.css" rel="stylesheet" type="text/css">
+    <script src="./Demo_ gramática en JavaScript_files/JavaScript.js"></script>
+
+</head><body>
+    <div class="center clear">
+		<div class="wiki-main-content" id="document-main"><div class="center">
+		<!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-left-present">
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-main wiki-column text-content">
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <p></p> <div style="text-align: right;" class="prevnext">
+    <p>
+		<a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html#" style="float: left;" class="new" rel="nofollow">« Anterior</a>
+		<a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript2.html" class="new" rel="nofollow">Siguiente  »</a>
+	</p>
+	</div><p></p>
+
+<div class="summary">
+<p>Este capítulo analiza la gramática básica de JavaScript, declaraciones de variables, tipos de datos y literales.</p>
+</div>
+
+<h2>Conceptos básicos</h2>
+
+<p>JavaScript esta influenciado sobre todo por la sintaxis de Java, pero también de Awk, Perl y&nbsp;Python.</p>
+
+<p>JavaScript es case-sensitive (distingue&nbsp;mayúsculas y minúsculas)&nbsp;y utiliza el conjunto de caracteres Unicode.</p>
+
+
+<h3 id="Declarando_variables" class="highlight-spanned"><span class="highlight-span">Declarando variables</span></h3>
+<p>Puedes declarar una variable de tres maneras:</p>
+
+<ul>
+ <li>Con la palabra clave&nbsp;<a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html#" title="en-US/docs/JavaScript/Reference/Statements/var">var</a>. Por ejemplo,&nbsp;var x = 42. Esta sintaxis puede ser usada para declarar tanto variables&nbsp;locales como globales.</li>
+ <li>Simplemente asignándole un valor. Por ejemplo,&nbsp;x = 42. Esto siempre declara una variable&nbsp;global&nbsp;y no puede ser cambiada a nivel local. Esto genera una advertencia strict de JavaScript. No&nbsp;deberías usar esta variante.</li>
+ <li>Con la palabra clave <a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html#" title="La instrucción let declara una variable de alcance local con ámbito de bloque(block scope), la cual, opcionalmente, puede ser inicializada con algún valor."><code>let</code></a>. Por ejemplo,&nbsp;let y = 13. Esta variable puede ser usada para declarar una variable local en un bloque de ámbito. Ver <a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html#">Ámbito de variable</a> más abajo.</li>
+</ul>
+<h3 id="Evaluando_variables" class="highlight-spanned"><span class="highlight-span">Evaluando&nbsp;variables</span></h3>
+
+<p>Una variable declarada usando la sentencia&nbsp;var o let&nbsp;sin asignarle un valor inicial tiene el valor&nbsp;<a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html#" title="en-US/docs/JavaScript/Reference/Global Objects/undefined">undefined</a>.</p>
+
+<p>Al intentar acceder a una variable no declarada dará como resultado la excepción <a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html#" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !" class="new" rel="nofollow"><code>ReferenceError</code></a>:</p>
+
+<pre class="line-numbers  language-html"><code class=" language-html">var a;
+console.log('El valor de a es ' + a); // El valor de a es undefined
+
+console.log('El valor de b es ' + b); // El valor de b es undefined
+var b;
+
+console.log('El valor de c es ' + c); // Uncaught ReferenceError: c no está definida
+
+let x;
+console.log('El valor de x es ' + x); // El valor de x es undefined
+
+console.log('El valor de y es ' + y); // Uncaught ReferenceError: y no está definida
+let y;<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="Uso_de_caracteres_especiales_en_strings" class="highlight-spanned"><span class="highlight-span">Uso de caracteres especiales en strings</span></h3>
+
+
+<p>Adicional a los caracteres normales, también puede incluir caracteres especiales en los strings, como se muestra en el siguiente ejemplo:</p>
+
+<pre style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;" class="brush: js  language-js"><code style="direction: ltr; white-space: pre;" class=" language-js"><span class="token string">"una linea \n otra linea"</span></code></pre>
+
+<div style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;" class="line-number">&nbsp;</div>
+
+<p>La siguiente tabla lista los caracteres especiales que se pueden usar en un string JavaScript.</p>
+
+<table class="standard-table">
+ <caption>Tabla 2.1 caracteres especiales JavaScript</caption>
+ <thead>
+  <tr>
+   <th scope="col">Character</th>
+   <th scope="col">Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>\b</code></td>
+   <td>Retroceso</td>
+  </tr>
+  <tr>
+   <td><code>\f</code></td>
+   <td>Avance de Página</td>
+  </tr>
+  <tr>
+   <td><code>\n</code></td>
+   <td>Nueva Línea</td>
+  </tr>
+  <tr>
+   <td><code>\r</code></td>
+   <td>Retorno de Línea</td>
+  </tr>
+  <tr>
+   <td><code>\t</code></td>
+   <td>Tabulador</td>
+  </tr>
+  <tr>
+   <td><code>\v</code></td>
+   <td>Tabulador Vertical</td>
+  </tr>
+  <tr>
+   <td><code>\'</code></td>
+   <td>Apóstrofe o comilla sencilla</td>
+  </tr>
+  <tr>
+   <td><code>\"</code></td>
+   <td>Comilla doble</td>
+  </tr>
+  <tr>
+   <td><code>\\</code></td>
+   <td>Carácter Backslash</td>
+  </tr>
+  <tr>
+   <td><code>\<em>XXX</em></code></td>
+   <td>Los caracteres con la codificación Latin-1 especificada por tres dígitos octales <em>XXX</em> entre 0 y 377. Por ejemplo, \251 es la secuencia octal para el símbolo copyright.</td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+   <td><code>\x<em>XX</em></code></td>
+   <td>Los caracteres con la codificación Latin-1 especificada por dos dígitos hexadecimales <em>XX</em> entre 00 y FF. Por ejemplo, \xA9 es la secuencia hexadecimal para el símbolo copyright.</td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+   <td><code>\u<em>XXXX</em></code></td>
+   <td>Los caracteres Unicode especificados por la secuencia de cuatro dígitos Hexadecimales&nbsp; <em>XXXX</em>. Por ejemplo, \u00A9 es la secuencia Unicode para el símbolo copyright . Ver <a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html#">Secuencias de escape Unicode </a>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Por ejemplo, en cuanto al uso de comillas, para incluirlas dentro de una cadena&lt; tenemos distintas opciones/p&gt;
+</p><pre onclick="usoComillas()">        let comillas1 = "\"He is called 'Johnny\"";
+        let comillas2 = "'He is called 'Johnny'";
+        alert(comillas1 + ";\n" + comillas2) + ";";
+</pre>
+
+
+<div style="text-align: right;" class="prevnext">
+    <p>
+	<a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html#" style="float: left;" class="new" rel="nofollow">« Anterior</a>
+	<a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript2.html" class="new" rel="nofollow">Siguiente  »</a></p>
+</div><p></p>
+
+<h4 style="line-height: 30px; font-size: 2.14286rem;" id="sect1">&nbsp;</h4>
+                  
+                
+              </article>
+
+              <!-- contributors -->
+<div class="wiki-block contributors">               
+<div class="contributors-sub">
+  
+
+  </div>
+                
+
+                             
+</div>
+</div>
+
+            
+              <!-- quick links and approvals strip -->
+   <div id="wiki-left" class="column-strip wiki-column">
+
+                <!-- crumbs -->
+                
+  
+    <nav class="crumbs" role="navigation">
+
+    </nav>
+  
+
+                
+                  <!-- quick links -->
+                  
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-head">Temas relacionados</div>
+    
+ <ol>
+  <li><a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript1.html"><strong><em>Conceptos básicos</em></strong></a></li>
+  <li><a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript2.html"><strong><em>Variables</em></strong></a></li>
+   <li><a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript3.html"><strong><em>Arrays: definición y métodos</em></strong></a></li>
+  <li><a href="https://aulavirtual-fpdrioja.larioja.org/pluginfile.php/43028/mod_resource/content/9/JavaScript4.html"><strong><em>Funciones</em></strong></a></li>
+ </ol>
+
+  </div>
+                
+
+                <!-- approvals -->
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+    
+     
+
+  <!-- Footer -->
+    <footer id="nav-footer" class="nav-footer">
+     
+    </footer> 
+
+
+
+</div></body></html>

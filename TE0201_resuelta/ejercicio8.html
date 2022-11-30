@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <script>
+            let nCampos = prompt("Cuantos campos tendra tu formulario");
+            while (isNaN(parseInt(nCampos))) {
+                alert("El numero de campos debe ser un numero entero");
+                nCampos = prompt("Cuantos campos tendra tu formulario");
+            };
+
+            for (i = 1; i <= nCampos; i++) {
+                let tipo = prompt("Elige el tipo de campo" + i + "(text, password, button, radio, checkbox, select)");
+                let nombre = prompt("Elige el nombre del campo" + i);
+                let valor;
+                switch (tipo) {
+                    case "text":
+                        valor = prompt("Elige el valor por defecto del campo" + i);
+                        document.write('<label>' + nombre + '<label><br><input type="text" name="' + nombre + '" value="' + valor + '"><br><br>');
+                        break;
+                    case "password":
+                        valor = prompt("Elige el valor por defecto del campo" + i);
+                        document.write('<label>' + nombre + '<label><br><input type="password" name="' + nombre + '" value="' + valor + '"><br><br>');
+                        break;
+                    case "button":
+                        valor = prompt("Elige el valor del campo" + i);
+                        document.write('<label>' + nombre + '<label><br><input type="button" name="' + nombre + '" value="' + valor + '"><br><br>');
+                        break;
+                    case "radio":
+                        let nRadio = prompt("Cuantas opciones tendra tu campo " + nombre);
+                        while (isNaN(parseInt(nRadio))) {
+                            alert("El numero de opciones debe ser un numero entero");
+                            nRadio = prompt("Cuantas opciones tendra tu campo " + nombre);
+                        };
+                        document.write('<label>' + nombre + '<label><br>');
+                        for (o = 0; o < nRadio; o++) {
+                            valor = prompt("Elige el valor de la opcion" + o);
+                            document.write('<input type="radio" id="' + valor + '" name="' + nombre + '" value="' + valor + '"><label for="' + valor + '">' + valor + '</label><br>');
+                        }
+                        break;
+                    case "checkbox":
+                        let nCheck = prompt("Cuantas opciones tendra tu campo " + nombre);
+                        while (isNaN(parseInt(nCheck))) {
+                            alert("El numero de opciones debe ser un numero entero");
+                            nCheck = prompt("Cuantas opciones tendra tu campo " + nombre);
+                        };
+                        document.write('<label>' + nombre + '<label><br>');
+                        for (o = 0; o < nCheck; o++) {
+                            valor = prompt("Elige el valor de la opcion" + o);
+                            document.write('<input type="checkbox" id="' + valor + '" name="' + valor + '" value="' + valor + '"><label for="' + valor + '">' + valor + '</label><br>');
+                        }
+                        break;
+                    case "select":
+                        let nSelect = prompt("Cuantas opciones tendra tu campo " + nombre);
+                        while (isNaN(parseInt(nSelect))) {
+                            alert("El numero de opciones debe ser un numero entero");
+                            nSelect = prompt("Cuantas opciones tendra tu campo " + nombre);
+                        };
+                        document.write('<label for="' + nombre + '">' + nombre + '</label><select name="' + nombre + '" id="' + nombre + '">');
+                        for (o = 0; o < nSelect; o++) {
+                            valor = prompt("Elige el valor de la opcion" + o);
+                            document.write('<option value="' + valor + '">' + valor + '</option>');
+                        }
+                        document.write('</select><br>');
+                        break;
+                    default:
+                        alert("Tipo del campo no valido, los tipos validos son: text, password, button, radio, checkbox, select");
+                        i--;
+                        break;
+                }
+
+            }
+        </script>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <script>
+            let filas = prompt("Escribe el numero de filas");
+            let columnas = prompt("Escribe el numero de columnas");
+            let colspan = prompt("Escribe el colspan");
+            let numero = 1;
+            let ncol = 0;
+
+            for (f = 0; f < filas; f++) {
+                document.write("<tr>");
+                if (f > 0) {
+                    while (ncol < Math.floor(columnas / colspan)) {
+                        document.write('<td colspan="' + colspan + '">' + numero + " </td>");
+                        numero++;
+                        ncol++;
+                    }
+                    ncol = 0;
+                    while (ncol < columnas % colspan) {
+                        document.write("<td>" + numero + " </td>");
+                        numero++;
+                        ncol++;
+                    }
+                } else {
+                    while (ncol < columnas) {
+                        document.write("<td>" + numero + " </td>");
+                        numero++;
+                        ncol++;
+                    }
+                }
+
+                ncol = 0;
+                document.write("</tr>");
+            }
+        </script>
+
+
+    </table>
+</body>
+
+</html>

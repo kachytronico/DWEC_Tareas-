@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio1</title>
+
+    <script>
+        let entrada = prompt("Introduce una cadena de solo texto:");
+        let array = entrada.toLowerCase().replaceAll(" ", "").split("");
+        let i = 0;
+        let palindromo = true
+        while (i < array.length / 2 && palindromo) {
+            if (array[i] != array[array.length - i - 1]) {
+                palindromo = false;
+            };
+            i++;
+        };
+        if (palindromo) {
+            alert("El texto es palindromo");
+        } else {
+            alert("El texto no es palindromo");
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
